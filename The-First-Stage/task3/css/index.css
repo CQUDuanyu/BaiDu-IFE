@@ -79,6 +79,7 @@ body{
     margin-right: 20px;
 }
 #team-github{
+    float: left;
     display: block;
     margin-top: 10px;
 }
