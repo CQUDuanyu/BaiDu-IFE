@@ -1,0 +1,90 @@
+div{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 20px;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+#container{
+    overflow: hidden;
+    width: 100%;
+    padding: 20px;
+    background-color: #ccf;
+    box-sizing: border-box;
+}
+#wrapper{
+    width: 100%;
+    float: left;
+}
+#main{
+    overflow: hidden;
+    margin-left: 220px;
+    margin-right: 140px;
+    background-color: #ccf;
+    border: 1px solid #555;
+}
+#left, #right{
+    float: left;
+}
+#left{
+    width: 200px;
+    height: 120px;
+    margin-left: -100%;
+    background-color: #99cccc;
+}
+#right{
+    width: 120px;
+    margin-left: -120px;
+    background-color: #9cf;
+}
+#team-logo{
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin: 20px 10px 0 20px;
+    border-radius: 5px;
+}
+#team-name{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+#right h2{
+    text-align: center;
+    font-size: 20px;
+}
+.members{
+    margin-top: 30px;
+}
+.member{
+    margin-top: 20px;
+}
+.member img{
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+#main h1{
+    font-size: 25px;
+    text-align: center;
+}
+#main p{
+    text-indent: 2em;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#team-github{
+    display: block;
+    margin-top: 10px;
+}
+#team-github img{
+    width: 25px;
+}
+footer p{
+    text-align: right;
+}
