@@ -3,9 +3,10 @@
     padding: 0;
 }
 body{
-    font-family: sans-serif;
     font-size: 10px;
     min-width: 600px;
+    font-family: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+
 }
 h1, h2, h3{
     font-size: 100%;
@@ -31,7 +32,7 @@ header > h1{
     background-size: contain;
 }
 #nav{
-    overflow: auto;
+    overflow: hidden;
     margin-right: 30px;
 }
 #nav > li {
@@ -59,43 +60,62 @@ header > h1{
 }
 #main{
     width: 100%;
-    /*height: 50px;*/
     margin-right: 20px;
+    min-width: 600px;
 }
 #sidebar{
-    width: 460px;
+    flex-shrink: 0;
+    width: 400px;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 10px 20px;
 }
 #sidebar h2{
     text-align: center;
     font-size: 2em;
 }
-#form td{
-    font-size: 1.4em;
+
+#sidebar h2{
+    border-left: 4px solid #ccc;
 }
-#form tr td:first-child{
+
+#form label{
     display: inline-block;
-    width: 120px;
+    width: 35%;
+    text-align: right;
+    font-size: 1.4em;
     margin-right: 10px;
 }
-.light-font{
+#form p{
+    font-size: 1.3em;
+    margin-left: 36%;
     color: #ccc;
 }
-#form input[type="text"], #form input[type="password"], #form select{
-    display: inline-block;
+#form div{
+    margin: 15px 0;
+}
+#form input{
     height: 20px;
+}
+#form textarea{
+    height: 150px;
+    width: 60%;
+}
+#form input, #form textarea, #form label, #form select{
+    vertical-align: middle;
 }
 #form input[type="submit"]{
     display: block;
-    width: 100%;
-    height: 30px;
-    margin: 15px auto 0;
+    margin: 0 auto;
     border: none;
-    border-radius: 5px;
-    background-color: #99cccc;
-    box-shadow: 2px 2px #ccc;
+    background-color: #aaf;
+    font-size: 1.6em;
+    height: 50px;
+    width: 80%;
+    border-radius: 10px;
+    font-weight: 700;
+    color: #fff;
 }
+
 .article{
     padding: 20px;
     margin-bottom: 20px;
@@ -124,15 +144,47 @@ header > h1{
     width: 30%;
     margin: 10px auto;
 }
-#pic-show{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-#pic-show img{
+.clearfix:after{
+    content: "";
     display: block;
-    width: 30%;
-    margin-bottom: 10px;
+    clear: both;
+}
+#pic-show{
+    list-style: none;
+}
+
+@media screen and (min-width: 1200px){
+    #pic-show li{
+        float: left;
+        width: 20%;
+    }
+    #pic-show img{
+        display: block;
+        margin: 10px auto;
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1200px) and (min-width: 600px){
+    #pic-show li{
+        float: left;
+        width: 25%;
+    }
+    #pic-show img{
+        display: block;
+        margin: 10px auto;
+        width: 90%;
+    }
+}
+@media screen and (max-width: 600px){
+    #pic-show li{
+        float: left;
+        width: 50%;
+    }
+    #pic-show img{
+        display: block;
+        margin: 10px auto;
+        width: 90%;
+    }
 }
 #range{
     margin-left: 20px;
@@ -169,6 +221,10 @@ footer{
     font-size: 1.4em;
     color: #fff;
     line-height: 50px;
+}
+#textarea{
+    width: 100%;
+    min-height: 100px;
 }
 
 

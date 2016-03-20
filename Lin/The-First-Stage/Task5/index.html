@@ -45,17 +45,18 @@
             </div>
             <div class="article shadow">
                 <h2>图片展示</h2>
-                <div id="pic-show">
-                    <img src="images/tu.jpg" alt="兔子">
-                    <img src="images/tu.jpg" alt="兔子">
-                    <img src="images/tu.jpg" alt="兔子">
-                    <img src="images/tu.jpg" alt="兔子">
-                    <img src="images/tu.jpg" alt="兔子">
-                    <img src="images/tu.jpg" alt="兔子">
-                    <img src="images/tu.jpg" alt="兔子">
-                    <img src="images/tu.jpg" alt="兔子">
-                    <img src="images/tu.jpg" alt="兔子">
-                </div>
+                <ul id="pic-show" class="clearfix">
+                    <li class="figure"><img src="images/tuzi.jpg" alt=""></li>
+                    <li class="figure"><img src="images/tuzi.jpg" alt=""></li>
+                    <li class="figure"><img src="images/tuzi.jpg" alt=""></li>
+                    <li class="figure"><img src="images/tuzi.jpg" alt=""></li>
+                    <li class="figure"><img src="images/tuzi.jpg" alt=""></li>
+                    <li class="figure"><img src="images/tuzi.jpg" alt=""></li>
+                    <li class="figure"><img src="images/tuzi.jpg" alt=""></li>
+                    <li class="figure"><img src="images/tuzi.jpg" alt=""></li>
+                    <li class="figure"><img src="images/tuzi.jpg" alt=""></li>
+                    <li class="figure"><img src="images/tuzi.jpg" alt=""></li>
+                </ul>
             </div>
             <div class="article shadow">
                 <h2>一个Table</h2>
@@ -98,65 +99,48 @@
         <aside id="sidebar" class="shadow">
             <h2>请输入信息</h2>
             <form method="post" id="form">
-                <table border="0">
-                    <tr>
-                        <td align="right">请输入邮箱地址</td>
-                        <td><input type="text" placeholder="请输入邮箱"></td>
-                    </tr>
-                    <tr>
-                        <td> </td>
-                        <td class="light-font">请按照邮箱的格式输入</td>
-                    </tr>
-                    <tr>
-                        <td align="right">请输入密码</td>
-                        <td><input type="password"></td>
-                    </tr>
-                    <tr>
-                        <td align="right">请输入重复的密码</td>
-                        <td><input type="password"></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td class="light-font">密码为6-16位英文或数字</td>
-                    </tr>
-                    <tr>
-                        <td align="right">性别</td>
-                        <td>
-                            <input type="radio" name="sex" value="male">男
-                            <input type="radio" name="sex" value="famale">女
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right">城市</td>
-                        <td>
-                            <select name="city">
-                                <option value="beijing">北京</option>
-                                <option value="beijing">北京</option>
-                                <option value="beijing">北京</option>
-                                <option value="beijing">北京</option>
-                                <option value="beijing">北京</option>
-                                <option value="beijing">北京</option>
-                                <option value="beijing">北京</option>
-                                <option value="beijing">北京</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right">爱好</td>
-                        <td>
-                            <input type="checkbox" name="hobby" value="basketball">篮球
-                            <input type="checkbox" name="hobby" value="pingpong">乒乓球
-                            <input type="checkbox" name="hobby" value="tennis">网球
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right">个人描述</td>
-                        <td>
-                            <textarea name="instruction"  cols="30" rows="10"></textarea>
-                        </td>
-                    </tr>
-                </table>
-                <input type="submit" value="提交">
+                <div>
+                    <label>请输入邮箱地址</label>
+                    <input type="text" placeholder="you@email.com">
+                </div>
+                <p>邮箱地址请按要求格式输入</p>
+                <div>
+                    <label>请输入密码</label>
+                    <input type="password">
+                </div>
+                <div>
+                    <label>请再次输入密码</label>
+                    <input type="password">
+                </div>
+                <p>密码请为6-16位英文数字</p>
+                <div>
+                    <label>性别</label>
+                    <input type="radio" name="sex" value="male">男
+                    <input type="radio" name="sex" value="famale">女
+                </div>
+                <div>
+                    <label>城市</label>
+                    <select>
+                        <option value="beijing">北京</option>
+                        <option value="beijing">北京</option>
+                        <option value="beijing">北京</option>
+                        <option value="beijing">北京</option>
+                        <option value="beijing">北京</option>
+                        <option value="beijing">北京</option>
+                        <option value="beijing">北京</option>
+                    </select>
+                </div>
+                <div>
+                    <label>爱好</label>
+                    <input type="checkbox" name="hobby" value="basketball">篮球
+                    <input type="checkbox" name="hobby" value="tennis">网球
+                    <input type="checkbox" name="hobby" value="football">足球
+                </div>
+                <div>
+                    <label>个人简介</label>
+                    <textarea name="instruction" id="instruc"></textarea>
+                </div>
+                <input type="submit" value="确认提交">
             </form>
         </aside>
     </div>
