@@ -1,3 +1,3 @@
 ## Task 6
 
-[在线demo](https://cdn.rawgit.com/Front-TURING/BaiDu-IFE/master/Lin/The-First-Stage/Task6/index.html)
+[在线demo](http://front-turing.github.io/BaiDu-IFE/Lin/The-First-Stage/Task6/)
