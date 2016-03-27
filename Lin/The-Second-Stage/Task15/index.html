@@ -40,7 +40,7 @@
             childContent = child.textContent;
         //循环遍历每一个子element
         while(child){
-            data.push(childContent.replace(/空.+[^0-9]/, ",").split(","));//正则表达式匹配出需要的信息
+            data.push(childContent.replace(/空.*[^0-9]/, ",").split(","));//正则表达式匹配出需要的信息
             child = child.nextElementSibling;
             childContent = child? child.textContent: "";
         }
