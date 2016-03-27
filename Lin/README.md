@@ -1,4 +1,6 @@
-# BaiDu-IFE
+## BaiDu-IFE
+
 2016春季百度ife前端学习竞赛
 
-hahah
+http://front-turing.github.io/BaiDu-IFE/Lin/The-Second-Stage/
+
