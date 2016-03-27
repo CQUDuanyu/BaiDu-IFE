@@ -23,7 +23,7 @@
         ["成都", 90],
         ["西安", 100]
     ];
-
+    //一定要传入形参aqiData否则，用sort排序后就直接修改了源数据
     (function () {
 
         /*
@@ -32,23 +32,21 @@
          将空气质量指数大于60的城市显示到aqi-list的列表中
          */
 
-        //利用filter函数过滤数据，并按照污染度从高到低排序
-        var newAqiData = aqiData.filter(function(item, index, arr) {
+        //创建文档碎片，避免频繁操作dom而带来的性能损耗
+        var frag = document.createDocumentFragment();
+        //利用filter函数过滤数据，sort()方法按照污染度从高到低排序，forEach遍历排序后的数组
+        aqiData.filter(function(item, index, arr) {
             return (item[1] > 60);
         }).sort(function(val1, val2) {
             return val2[1] - val1[1];
-        });
-        //遍历排序后的数据，创建文档碎片，可以提高效率
-        var frag = document.createDocumentFragment();
-        var aqiList = document.getElementById("aqi-list");
-        newAqiData.forEach(function(item, index, arr) {
+        }).forEach(function(item, index, arr) {
             var li = document.createElement("li");
             li.innerHTML = "第"+(index+1)+"名："+item.join("，");
             frag.appendChild(li);
         });
-        aqiList.appendChild(frag);
-    })();
-
+        //插入DOM
+        document.getElementById("aqi-list").appendChild(frag);
+    })(aqiData);
 </script>
 </body>
 </html>
