@@ -32,22 +32,21 @@
          将空气质量指数大于60的城市显示到aqi-list的列表中
          */
 
-        //利用filter函数过滤数据
+        //利用filter函数过滤数据，并按照污染度从高到低排序
         var newAqiData = aqiData.filter(function(item, index, arr) {
             return (item[1] > 60);
-        });
-        //按污染程度对过滤后的数据进行排序
-        newAqiData.sort(function(val1, val2) {
+        }).sort(function(val1, val2) {
             return val2[1] - val1[1];
         });
-
+        //遍历排序后的数据，创建文档碎片，可以提高效率
+        var frag = document.createDocumentFragment();
         var aqiList = document.getElementById("aqi-list");
-        //遍历排序后的数据，并插入到列表中
         newAqiData.forEach(function(item, index, arr) {
             var li = document.createElement("li");
             li.innerHTML = "第"+(index+1)+"名："+item.join("，");
-            aqiList.appendChild(li);
+            frag.appendChild(li);
         });
+        aqiList.appendChild(frag);
     })();
 
 </script>
