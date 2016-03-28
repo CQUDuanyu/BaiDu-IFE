@@ -96,7 +96,7 @@ function delBtnHandle() {
     var event = arguments[0] || window.event;
     event.stopPropagation();
     var target = event.target;
-    if(target.tagName = "button") {
+    if(target.tagName.toLowerCase() == "button") {
         var tr = target.parentNode.parentNode;
         renderAqiList(tr.rowIndex);
     }
