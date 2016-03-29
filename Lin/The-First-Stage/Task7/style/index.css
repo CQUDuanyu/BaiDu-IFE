@@ -72,6 +72,7 @@ header {
   box-sizing: border-box;
   background-color: #fff;
   z-index: 100;
+  box-shadow: 3px 0 3px #888;
 }
 #logo {
   color: #000;
