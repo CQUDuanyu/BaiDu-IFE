@@ -126,7 +126,7 @@ function initGraTimeForm() {
     }
 
     formGraTime.onclick = function(event) {
-        var target = event.target || window.event.target;
+        var target = event.target || window.event.srcElement;
         if(target.tagName.toLowerCase() == "input" && target.value != pageState.nowGraTime) {
             pageState.nowGraTime = target.value;
             graTimeChange();
@@ -154,7 +154,7 @@ function initCitySelector() {
     pageState.nowSelectCity = citySelect.selectedIndex;
     // 给select设置事件，当选项发生变化时调用函数citySelectChange
     citySelect.onchange = function(event) {
-        var target = event.target || window.event.target;
+        var target = event.target || window.event.srcElement;
         pageState.nowSelectCity = target.selectedIndex;
         citySelectChange();
     }

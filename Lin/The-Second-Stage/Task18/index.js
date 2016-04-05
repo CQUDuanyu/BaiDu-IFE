@@ -19,7 +19,7 @@ $("#control").onclick = function(event) {
 };
 //给队列中的每个元素添加事件监听
 queue.onclick = function(event) {
-    var target = event.target || window.event.target;
+    var target = event.target || window.event.srcElement;
     if(target.tagName.toLowerCase() == "span") {
         queue.removeChild(target);
     }

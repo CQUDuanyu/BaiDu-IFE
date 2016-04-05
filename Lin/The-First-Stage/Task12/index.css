@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+table{
+    text-align: center;
+}
+thead{
+    background-color: #555;
+    color: #fff;
+}
+tbody tr:nth-child(even){
+    background-color: #ccc;
+}
+tbody tr:nth-child(1), tr:nth-child(2), tr:nth-child(3){
+    color: red;
+}
+#input{
+    margin-top: 30px;
+    width: 200px;
+    background-color: #ccc;
+    transition: width 2s ease-out;
+}
+#input:focus{
+    width: 400px;
+}
+#turn-pic01{
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    margin: 30px;
+}
+#banner{
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+#banner li{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#banner li:target{
+    z-index: 2;
+    animation: move-in 1.5s ease;
+}
+
+
+#first-pic{
+    background-color: #cff;
+}
+#second-pic{
+    background-color: #ffc;
+}
+#third-pic{
+    background-color: #fcc;
+}
+#button{
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+}
+#button a{
+    display: inline-block;
+    width: 30px;
+    background-color: #aaa;
+    height: 30px;
+    margin-right: 10px;
+    z-index: 10;
+    text-decoration: none;
+}
+
+@keyframes move-in {
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0;
+    }
+}
+#turn-pic02{
+    width: 300px;
+    height: 200px;
+    margin: 30px;
+    overflow: hidden;
+}
+#turn-pic02 ul{
+    width: 100%;
+    height: inherit;
+    position: relative;
+}
+#turn-pic02 li{
+    position: absolute;
+    width: 300px;
+    height: inherit;
+    list-style: none;
+}
+#first{
+    background-color: #000;
+    animation: first-move 12s ease infinite;
+}
+#second{
+    background-color: #ffc;
+    animation: seconde-move 12s ease infinite;
+}
+#third{
+    background-color: #fcc;
+    animation: third-move 12s ease infinite;
+}
+#forth{
+    background-color: #cfc;
+    animation: forth-move 12s ease infinite;
+}
+@keyframes first-move {
+    0%{
+        opacity: 1;
+    }
+    5%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 0;
+    }
+    35%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes second-move {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    30%{
+        opacity: .5;
+    }
+    35%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    55%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes third-move {
+    0%{
+        opacity: 0;
+    }
+    49%{
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+    }
+    60%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    80%{
+        opacity: .6;
+    }
+    85%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes forth-move {
+    0%{
+        opacity: 0;
+    }
+    74%{
+        opacity: 0;
+    }
+    75%{
+        opacity: .5;
+    }
+    85%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
