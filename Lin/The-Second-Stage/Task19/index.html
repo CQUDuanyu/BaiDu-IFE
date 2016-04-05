@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 18</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #queue span{
+            display: inline-block;
+            width: 20px;
+            background-color: #ccf;
+            margin: 1px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 12px;
+        }
+        #queue{
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        #mask{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            top: 0;
+            left: 0;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="control">
+    <input type="text" placeholder="只能输入数字" id="input-num">
+    <button id="left-in">左侧入</button>
+    <button id="right-in">右侧入</button>
+    <button id="left-out">左侧出</button>
+    <button id="right-out">右侧出</button>
+</div>
+<div id="sort">
+    <button id="generate-arr">产生随机数组</button>
+    <button id="bubble-sort">冒泡排序</button>
+    <button id="selection-sort">选择排序</button>
+    <button id="insertion-sort">插入排序</button>
+    <button id="quick-sort">快速排序</button>
+</div>
+<div id="queue"></div>
+<div id="mask" class="hidden"></div>
+<script src="index.js"></script>
+</body>
+</html>
