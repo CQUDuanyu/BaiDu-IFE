@@ -124,7 +124,7 @@ function show() {
         mask.className = "hidden";
         return;
     }
-    timer = setTimeout(show, 5);
+    timer = setTimeout(show, 10);
 }
 /**
  * 重置数据
