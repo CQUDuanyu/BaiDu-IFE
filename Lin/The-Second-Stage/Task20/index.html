@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 20</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #queue span{
+            display: inline-block;
+            min-width: 30px;
+            height: 30px;
+            background-color: #f55;
+            margin: 5px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            padding: 3px;
+        }
+        #queue span i{
+            font-style: normal;
+            padding: 2px 0;
+            background-color: #ccf;
+        }
+        #input-area{
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div id="control">
+    <textarea id="input-area" cols="30" rows="5"></textarea>
+    <button id="left-in">左侧入</button>
+    <button id="right-in">右侧入</button>
+    <button id="left-out">左侧出</button>
+    <button id="right-out">右侧出</button>
+    <input type="text" id="search-content"><button id="search">查询</button>
+</div>
+
+<div id="queue"></div>
+<script src="index.js"></script>
+</body>
+</html>
