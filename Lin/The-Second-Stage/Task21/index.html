@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task 21</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 10px;;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        #container{
+            margin-top: 3rem;
+            margin-left: 5rem;
+        }
+        #container label {
+            font-size: 2rem;
+            vertical-align: top;
+        }
+        #tag{
+            height: 2rem;
+            width: 20rem;
+        }
+        .display{
+            height: 2.5rem;
+        }
+        #hobby-input{
+            margin-top: 2rem;
+        }
+        #confirm-hobby{
+            display: block;
+            font-size: 1.6rem;
+            padding: 0 0.5rem;
+            border: none;
+            background-color: #55aaff;
+            cursor: pointer;
+        }
+        .display{
+            margin-top: 20px;
+        }
+        .display span{
+            background-color: #55aaff;
+            font-size: 1.4rem;
+            color: #fff;
+            margin: 0 5px;
+            padding: 3px 5px;
+        }
+        .display span:hover{
+            background-color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="tag-input">
+            <label for="tag">Tag:</label>
+            <input type="text" id="tag">
+            <div class="display" id="tag-list"></div>
+        </div>
+        <div id="hobby-input">
+            <textarea id="hobby" cols="30" rows="10"></textarea>
+            <button id="confirm-hobby">确认兴趣爱好</button>
+            <div class="display" id="hobby-list"></div>
+        </div>
+    </div>
+    <script src="index.js">
+    </script>
+</body>
+</html>
