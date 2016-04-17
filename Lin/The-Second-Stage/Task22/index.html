@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task 22</title>
+    <style>
+        body, div{margin: 0; padding: 0;}
+        .root{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 500px;
+            height: 300px;
+            margin: 50px auto;
+        }
+        .root div, .root{
+            border: 1px solid #000;
+        }
+        .root div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            height: 80%;
+            background-color: #fff;
+        }
+        .root .layer4-left, .root .layer4-right{
+            width: 30%;
+        }
+        .bg{
+            background-color: blue;
+        }
+        #button{
+            text-align: center;
+        }
+        #button button{
+            padding: 8px 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="root">
+        <div class="layer2-left">
+            <div class="layer3-left">
+                <div class="layer4-left"></div>
+                <div class="layer4-right"></div>
+            </div>
+            <div class="layer3-right">
+                <div class="layer4-left"></div>
+                <div class="layer4-right"></div>
+            </div>
+        </div>
+        <div class="layer2-right">
+            <div class="layer3-left">
+                <div class="layer4-left"></div>
+                <div class="layer4-right"></div>
+            </div>
+            <div class="layer3-right">
+                <div class="layer4-left"></div>
+                <div class="layer4-right"></div>
+            </div>
+        </div>
+    </div>
+    <div id="button">
+        <button id="dlr">前序遍历</button>
+        <button id="ldr">中序遍历</button>
+        <button id="lrd">后序遍历</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
