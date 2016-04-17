@@ -1,3 +1,6 @@
+/**
+ * 程序入口
+ */
 window.onload = function() {
     var root = document.querySelectorAll(".root")[0],
         dlr = document.querySelector("#dlr"),
@@ -66,24 +69,19 @@ function postOrder(node) {
 }
 //动画
 function animation() {
-    var index = 0,
-        timer, previous = null;
+    var timer, head = null;
     show();
     function show() {
-        if(traverseProcess[index] === undefined) {
-            clearTimeout(timer);
-            traverseProcess = [];
-            previous.style.backgroundColor = "#fff";
-            buttonState(false);
-            return;
+        head = traverseProcess.shift();//出队
+        if(head) {
+            head.style.backgroundColor = "#ccf";//显示紫色
+            timer = setTimeout(function() {
+                head.style.backgroundColor = "#fff";//600ms显示紫色
+                show();//递归调用，要显示的节点不停的出队，知道出完为止
+            }, 600);
+        }else {
+            buttonState(false);//出队结束后，按钮恢复可用
         }
-        if(previous !== null) {
-            previous.style.backgroundColor = "#fff";
-        }
-        traverseProcess[index].style.backgroundColor = "blue";
-        timer = setTimeout(show, 500);
-        previous = traverseProcess[index];
-        index++;
     }
 }
 
