@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task 24</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 14px;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        #root div, #root{
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+            border-radius: 7px;
+            transition: background-color 0.5s ease 0s;
+        }
+        #root div{
+            flex: 1 1 auto;
+            height: 90%;
+            margin-left: 5px;
+            background-color: #fff;
+        }
+        #root{
+            width: 1200px;
+            height: 400px;
+            border: 2px solid #000;
+            margin: 30px auto;
+        }
+        .second-layer{
+            border: 2px solid #418c59;
+        }
+        .third-layer{
+            border: 2px solid #ba9d37;
+        }
+        .forth-layer{
+            border: 2px solid #e74f4d;
+        }
+        .fifth-layer{
+            border: 2px solid #8a4182;
+        }
+        #selections{
+            width: 800px;
+            margin: 0 auto;
+            border: 2px solid #ccf;
+            border-radius: 10px;
+            text-align: center;
+        }
+        #selections legend{
+            text-align: center;
+            font-size: 20px;
+        }
+        #selections button{
+            padding: 10px 15px;
+            border: 1px solid #000;
+            background-color: #fff;
+            margin: 20px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease 0s;
+        }
+        #selections button:hover{
+            background-color: #000;
+            color: #fff;
+        }
+        #selections input{
+            width: 200px;
+            height: 25px;
+            margin-bottom: 10px;
+        }
+        .added{
+            border: 1px solid #99ccff;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">Super
+        <div class="second-layer">Apple
+            <div class="third-layer">Cow
+                <div class="forth-layer">Yellow</div>
+                <div class="forth-layer">Blue
+                    <div class="fifth-layer">Color</div>
+                    <div class="fifth-layer">Wow</div>
+                    <div class="fifth-layer">Football</div>
+                </div>
+            </div>
+            <div class="third-layer">Phone</div>
+            <div class="third-layer">Music
+                <div class="forth-layer">Book</div>
+                <div class="forth-layer">Boy
+                    <div class="fifth-layer">Love</div>
+                </div>
+            </div>
+        </div>
+        <div class="second-layer">Orange
+            <div class="third-layer">Girl
+                <div class="forth-layer">BF</div>
+                <div class="forth-layer">Dad</div>
+                <div class="forth-layer">Angela</div>
+            </div>
+            <div class="third-layer">Mam
+                <div class="forth-layer">Deep
+                    <div class="fifth-layer">Deeper</div>
+                </div>
+            </div>
+        </div>
+        <div class="second-layer">
+            Plan
+        </div>
+    </div>
+    <fieldset id="selections">
+        <legend>选项卡</legend>
+        <button id="traverseDF">深度优先</button>
+        <button id="traverseBF">广度优先</button>
+        <button id="delete">删除该节点</button>
+        <div>
+            <label for="search-content">请输入要查找的内容，然后点击上方的按钮之一：</label>
+            <input id="search-content" type="text" placeholder="请输入要查找的内容">
+        </div>
+        <button id="add-node">添加</button>
+        <input id="add-content" type="text" placeholder="请输入要添加的内容">
+
+    </fieldset>
+    <script src="index.js"></script>
+</body>
+</html>
