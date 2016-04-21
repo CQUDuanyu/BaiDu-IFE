@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task 25</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 16px;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        #box{
+            width: 500px;
+            min-height: 500px;
+            margin: 30px auto;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        #box legend{
+            text-align: center;
+        }
+        #box div{
+            margin-left: 10px;
+        }
+        .node, #root{
+            position: relative;
+        }
+        .arrow{
+            display: inline-block;
+            width: 0;
+            height: 0;
+        }
+        .to-right{
+            border-left: 12px solid #000;
+            border-top: 6px solid #fff;
+            border-bottom: 6px solid #fff;
+        }
+        .to-down{
+            border-top: 12px solid #000;
+            border-left: 6px solid #fff;
+            border-right: 6px solid #fff;
+        }
+        .value{
+            margin-left: 10px;
+        }
+        .empty-arrow{
+            border-left: 12px solid transparent;
+        }
+        #operate-tree button{
+            padding: 5px 10px;
+            background-color: #fff;
+            border: 1px solid #000;
+            border-radius: 2px;
+            margin-right: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        #operate-tree button:hover{
+            background-color: #000;
+            color: #fff;
+        }
+        #search-content{
+            display: block;
+            width: 200px;
+            height: 30px;
+            border-radius: 3px;
+            border: 1px solid #000;
+            margin: 20px auto;
+        }
+        #operate-tree{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <fieldset id="box">
+        <legend>树形文件结构</legend>
+        <input id="search-content" type="text" placeholder="请输入要查找的内容或增加的节点">
+        <div id="operate-tree">
+            <button id="search-node">搜索</button>
+            <button id="add-node">添加</button>
+            <button id="delete-node">删除</button>
+        </div>
+        <div id="container">
+
+        </div>
+        <!--<div id="root">
+            <lable><span class="arrow to-right"></span><span class="value">爱好</span></lable>
+            <div class="node">
+                <label><span class="arrow to-right"></span><span class="value">爱好</span></label>
+                <div class="node"><span class="arrow empty-arrow"></span><span class="value">爱好</span>t</div>
+                <div class="node"><span class="arrow empty-arrow"></span><span class="value">爱好</span></div>
+                <div class="node"><span class="arrow to-down"></span><span class="value">爱好</span></div>
+            </div>
+            <div class="node"><span class="arrow empty-arrow"></span><span class="value">音乐</span>
+                <div class="node"><span class="arrow empty-arrow"></span><span class="value">爱好</span></div>
+                <div class="node"><span class="arrow empty-arrow"></span><span class="value">爱好</span></div>
+                <div class="node"><span class="arrow empty-arrow"></span><span class="value">爱好</span></div>
+            </div>
+            <div class="node"></div>
+        </div>-->
+
+    </fieldset>
+    <script src="index.js"></script>
+</body>
+</html>
